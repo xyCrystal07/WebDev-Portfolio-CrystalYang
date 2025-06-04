@@ -27,19 +27,16 @@
         </div>
     </header>
 
-    <main>
-        <section class="portfolio-intro">
-            <div class="container">
-                <h1>My Projects</h1>
-                <p>Here are some of my recent works that showcase my skills and creativity.</p>
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="web">Web Design</button>
-                    <button class="filter-btn" data-filter="app">Applications</button>
-                    <button class="filter-btn" data-filter="other">Other</button>
-                </div>
-            </div>
-        </section>
+    <main class="container">
+        <h1>My Portfolio</h1>
+        <p class="portfolio-intro">Here are some of my recent projects that show some of myself.</p>
+        
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all projects">All Projects</button>
+            <button class="filter-btn" data-filter="web development">Web Development</button>
+            <button class="filter-btn" data-filter="hobby">Hobby</button>
+            <button class="filter-btn" data-filter="application">Application </button>
+        </div>
 
         <section class="projects">
             <div class="container">
@@ -47,10 +44,10 @@
                     <!-- Project 1 -->
                     <div class="project-card" data-category="web">
                         <div class="project-image">
-                            <img src="assets/images/project1.jpg" alt="E-commerce website project">
+                            <img src="assets/images/project1.jpg" alt="My Hobby project">
                         </div>
                         <div class="project-info">
-                            <h3>E-Commerce Website</h3>
+                            <h3>My Hobby</h3>
                             <p>A fully responsive online store with product filtering and cart functionality.</p>
                             <div class="project-tech">
                                 <span>HTML</span>
@@ -64,10 +61,10 @@
                     <!-- Project 2 -->
                     <div class="project-card" data-category="app">
                         <div class="project-image">
-                            <img src="assets/images/project2.jpg" alt="Task management application">
+                            <img src="2.png" alt="My Work">
                         </div>
                         <div class="project-info">
-                            <h3>Task Manager App</h3>
+                            <h3>My Work</h3>
                             <p>An interactive task management application with drag-and-drop functionality.</p>
                             <div class="project-tech">
                                 <span>JavaScript</span>
@@ -100,6 +97,48 @@
 
         <!-- Project Modal -->
         <div class="project-modal" id="projectModal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <div class="modal-body">
+                    <img src="" alt="" class="modal-image">
+                    <div class="modal-text">
+                        <h2 class="modal-title">Project Title</h2>
+                        <p class="modal-description">Project description goes here.</p>
+                        <div class="modal-tech-used">
+                            <h3>Technologies Used:</h3>
+                            <ul class="tech-list"></ul>
+                        </div>
+                        <div class="modal-links">
+                            <a href="#" class="btn" target="_blank">Live Demo</a>
+                            <a href="#" class="btn btn-outline" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+         <div class="project-moda2" id="project-moda2">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <div class="modal-body">
+                    <img src="" alt="" class="modal-image">
+                    <div class="modal-text">
+                        <h2 class="modal-title">Project Title</h2>
+                        <p class="modal-description">Project description goes here.</p>
+                        <div class="modal-tech-used">
+                            <h3>Technologies Used:</h3>
+                            <ul class="tech-list"></ul>
+                        </div>
+                        <div class="modal-links">
+                            <a href="#" class="btn" target="_blank">Live Demo</a>
+                            <a href="#" class="btn btn-outline" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+         <div class="project-moda3" id="project-moda3">
             <div class="modal-content">
                 <button class="close-modal">&times;</button>
                 <div class="modal-body">
