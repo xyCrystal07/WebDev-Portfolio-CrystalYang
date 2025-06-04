@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind the Scenes | DevPort</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header as index.html -->
+    </header>
+
+    <main>
+        <section class="behind-intro">
+            <div class="container">
+                <h1>Behind the Scenes</h1>
+                <p>A look at how this portfolio website was built</p>
+            </div>
+        </section>
+
+        <section class="development-process">
+            <div class="container">
+                <h2>Development Journey</h2>
+                <div class="process-tabs">
+                    <button class="tab-btn active" data-tab="planning">Planning</button>
+                    <button class="tab-btn" data-tab="design">Design</button>
+                    <button class="tab-btn" data-tab="coding">Coding</button>
+                    <button class="tab-btn" data-tab="testing">Testing</button>
+                </div>
+
+                <div class="tab-content active" id="planning">
+                    <h3>Planning Phase</h3>
+                    <p>The project began with extensive planning to ensure all requirements would be met effectively.</p>
+                    <div class="code-snippet">
+                        <h4>File Structure Planning</h4>
+                        <pre>
+project/
+├── index.html
+├── styles.css
+├── script.js
+├── assets/
+│   ├── images/
+│   └── icons/
+                        </pre>
+                    </div>
+                    <div class="screenshot">
+                        <img src="assets/images/wireframe.jpg" alt="Initial wireframe sketch">
+                        <p class="caption">Initial wireframe sketch for the homepage layout</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="design">
+                    <h3>Design Phase</h3>
+                    <p>Created mockups and style guides to establish visual consistency across the site.</p>
+                    <div class="design-elements">
+                        <div class="color-palette">
+                            <h4>Color Palette</h4>
+                            <div class="color-swatches">
+                                <div class="swatch primary">#2C3E50</div>
+                                <div class="swatch secondary">#3498DB</div>
+                                <div class="swatch accent">#E74C3C</div>
+                            </div>
+                        </div>
+                        <div class="typography">
+                            <h4>Typography</h4>
+                            <p class="font-primary">Primary font: 'Open Sans', sans-serif</p>
+                            <p class="font-secondary">Secondary font: 'Roboto', sans-serif</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="coding">
+                    <h3>Coding Phase</h3>
+                    <p>Implemented the design with clean, semantic HTML and CSS, adding JavaScript interactivity.</p>
+                    <div class="code-snippet">
+                        <h4>CSS Grid Implementation</h4>
+                        <pre>
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+                        </pre>
+                    </div>
+                    <div class="code-snippet">
+                        <h4>JavaScript Modal Function</h4>
+                        <pre>
+function openModal(project) {
+    const modal = document.getElementById('projectModal');
+    modal.querySelector('.modal-image').src = project.image;
+    modal.querySelector('.modal-title').textContent = project.title;
+    modal.querySelector('.modal-description').textContent = project.description;
+    
+    const techList = modal.querySelector('.tech-list');
+    techList.innerHTML = '';
+    project.technologies.forEach(tech => {
+        const li = document.createElement('li');
+        li.textContent = tech;
+        techList.appendChild(li);
+    });
+    
+    modal.style.display = 'block';
+}
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="testing">
+                    <h3>Testing Phase</h3>
+                    <p>Conducted thorough testing to ensure functionality and accessibility across devices.</p>
+                    <div class="testing-methods">
+                        <div class="test-method">
+                            <h4>Cross-Browser Testing</h4>
+                            <p>Verified functionality in Chrome, Firefox, Safari, and Edge</p>
+                        </div>
+                        <div class="test-method">
+                            <h4>Responsive Testing</h4>
+                            <p>Checked layout at various breakpoints using Chrome DevTools</p>
+                        </div>
+                        <div class="test-method">
+                            <h4>Accessibility Testing</h4>
+                            <p>Used WAVE and axe tools to identify and fix accessibility issues</p>
+                        </div>
+                    </div>
+                    <div class="screenshot">
+                        <img src="assets/images/devtools.jpg" alt="Chrome DevTools showing responsive testing">
+                        <p class="caption">Using Chrome DevTools for responsive testing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenges">
+            <div class="container">
+                <h2>Challenges & Solutions</h2>
+                <div class="challenge-cards">
+                    <div class="challenge-card">
+                        <h3>Mobile Navigation</h3>
+                        <p><strong>Challenge:</strong> Creating a responsive navigation that works well on all devices</p>
+                        <p><strong>Solution:</strong> Implemented a hamburger menu with smooth JavaScript transitions</p>
+                    </div>
+                    <div class="challenge-card">
+                        <h3>Project Filtering</h3>
+                        <p><strong>Challenge:</strong> Making the portfolio filter system accessible and performant</p>
+                        <p><strong>Solution:</strong> Used data attributes and event delegation for efficient filtering</p>
+                    </div>
+                    <div class="challenge-card">
+                        <h3>CSS Specificity</h3>
+                        <p><strong>Challenge:</strong> Managing CSS specificity across multiple components</p>
+                        <p><strong>Solution:</strong> Adopted BEM naming convention to keep styles organized</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="key-learnings">
+            <div class="container">
+                <h2>Key Learnings</h2>
+                <ul>
+                    <li>Mobile-first design significantly improves development workflow</li>
+                    <li>Semantic HTML provides better accessibility with less effort</li>
+                    <li>CSS Grid and Flexbox are powerful tools for responsive layouts</li>
+                    <li>Progressive enhancement ensures basic functionality for all users</li>
+                    <li>Regular testing throughout development prevents major issues</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
